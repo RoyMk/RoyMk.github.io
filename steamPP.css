@@ -1,0 +1,247 @@
+/* ========================== */
+/* Modern CSS Reset */
+/* ========================== */
+
+/* Source: Josh W. Comeau, Andy Bell, and others */
+
+/* General Reset */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+}
+
+/* Core Body Defaults */
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+/* List Reset */
+ul[role='list'], ol[role='list'] {
+    list-style: none;
+}
+
+/* Media Elements */
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* Form Controls */
+input, button, textarea, select {
+    font: inherit;
+}
+
+/* Typography */
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+
+p {
+    text-wrap: pretty;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+}
+
+/* Accessibility Preferences */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Root Stacking Context */
+#root, #__next {
+    isolation: isolate;
+}
+
+/* ========================== */
+/* General Layout */
+/* ========================== */
+
+:root {
+    --bg-color-primary: #1e1d1d;
+    --bg-color-profile-links-primary: rgba(30, 29, 29, 0.75);
+
+    --section-margins: 10px;
+    --margin-left-inner-items: 5px;
+
+    --featured-badge-margin: 15px;
+    --recent-activity-gametitle-margin: 10px;
+}
+
+main {
+}
+
+/* ========================== */
+/* Profile Section */
+/* ========================== */
+
+.profile-content{
+    margin-bottom: var(--section-margins);
+}
+
+
+.profile-about {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: var(--section-margins);
+
+
+
+}
+.online-status {
+    background-color: var(--bg-color-primary);
+    margin-bottom: var(--section-margins);
+}
+
+.online-status *{
+    margin-left: var(--margin-left-inner-items);
+}
+
+.profile-picture {
+    display: flex;
+    width: 130px;
+    align-items: center;
+    gap: 16px;
+}
+
+.profile-picture p {
+    font-weight: bold;
+}
+
+.level{
+    font-weight: bold;
+    margin-left: var(--margin-left-inner-items);
+}
+
+/* ========================== */
+/* Split Sections */
+/* ========================== */
+
+.split-top {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+    background-color: var(--bg-color-profile-links-primary);
+}
+
+.split-bottom {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    background-color: var(--bg-color-primary);
+}
+
+/* ========================== */
+/* Categories Section */
+/* ========================== */
+
+.categories {
+    background-color: var(--bg-color-profile-links-primary);
+    font-size: large;
+    display: flex;
+}
+
+.column-a, .column-b {
+    width: 100%;
+    margin-right: 4%;
+}
+
+.cat-item {
+    color: white;
+    margin: 8px;
+    background-color: var(--bg-color-profile-links-primary);
+    padding: 10px;
+    width: 100%;
+}
+
+/* ========================== */
+/* Recent Activity */
+/* ========================== */
+
+.recent-activity {
+    background-color: var(--bg-color-profile-links-primary);
+}
+
+.game-img{
+    margin-left: var(--margin-left-inner-items);
+}
+
+.section-header-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 1%;
+}
+
+.section-header-container .title {
+}
+
+/* ========================== */
+/* Game Details */
+/* ========================== */
+
+.game-img {
+    display: flex;
+    align-items: center;
+}
+
+.game-title {
+    margin-left: var(--recent-activity-gametitle-margin);
+}
+
+.row-1 {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* ========================== */
+/* Featured Badge */
+/* ========================== */
+
+.details {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.featured-badge {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: fit-content;
+    margin-right: var(--featured-badge-margin);
+
+}
+.featured-badge #years-label {
+    color: white;
+    font-size: 14px;
+}
+
+.featured-badge img {
+    width: 60px;
+
+}
+
+
+
+
