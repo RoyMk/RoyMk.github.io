@@ -7,11 +7,14 @@
     <link href="steamPP2.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.2/src/regular/style.css">
+
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <body>
 <header></header>
 <main>
     <section class="profile-header">
+
         <div class="profile-avatar-section">
             <img class="profile-avatar" src="pfp.jpg" alt="">
 
@@ -22,11 +25,25 @@
 
             <div class="profile-level">
                 <p>Level <span>55</span></p>
+                <div class="profile-header-badge ">
+                    <img src="steamyears21_80.png" alt="">
+                    <p>Years of service</p>
+                </div>
             </div>
         </div>
+        <div class="online-status online hide">
+            <div class="status">
+                <i class="ph ph-globe"></i>
+                <p>Online</p>
+            </div>
+            <button class="edit-profile-button">Edit Profile</button>
+        </div>
+        <div class="online-status offline">
+            <div class="status">
+                <i class="ph ph-globe-x"></i>
+                <p>Offline</p>
+            </div>
 
-        <div class="online-status">
-            <p>online status</p>
             <p>last online 43 hours ago</p>
             <button class="edit-profile-button">Edit Profile</button>
 
